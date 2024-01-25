@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.bgimg{
+    background-image: url("cric.jpg");
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(3px); 
+    z-index: -1; 
+
+}
+.heading{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.653) ;    margin: 50px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.scorebar{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.653) ;
+    gap: 1rem;
+}
+
+.team1,.team2{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.teamscore{
+    display: flex;
+    font-size: 30px;
+}
+
+.overs{
+    display: flex;
+
+}
+
+.socry{
+
+    text-align: center;
+}
+
+.msg{
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.653) ;
+}
+
+.scorecardic{
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(70, 255, 199, 0.653) ;
+
+}
+
+.scorecardbar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+}
+.teambtn{
+    background-color:rgba(240, 248, 255, 0.164);
+    border: none;
+    font-size: 20px;
+
+}
+
+table,th,td{
+    border: 1px solid;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.653) ;
+    }
+table select{
+border: none;
+font-size: 20px;
+font-weight: 700;
+/* -webkit-appearance : none; */
+width: 100%;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.002) ;
+
+}
+
+.edit{
+    padding: 20px;
+}
+
+.edit button{
+    height: 2rem;
+    width: 10rem;
+
+}
+.edit select{
+    height: 2rem;
+    width: 10rem;
+    border:none;
+}
