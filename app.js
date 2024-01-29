@@ -32,8 +32,182 @@ let run2=document.querySelectorAll(".edit button")
 
 //turn logic
 
-let team1turn=true;
+
+let team1turn=true
 let team2turn=false;
+
+if(team1turn){
+    
+    for (let i = 0; i <= 5; i++) {
+        run1[i].addEventListener("click",()=>{
+        team1score.innerText=parseInt(team1score.innerText)+parseInt(run1[i].innerText);
+        increaseOver1();
+        checkturn1change();
+    })
+}
+
+edit1Wick.addEventListener("change",()=>{
+    team1wicket.innerText++;
+    checkturn1change();
+})
+
+body.addEventListener('keypress', function(event) {
+
+
+    if (event.key === "1") {
+        team1score.innerText=parseInt(team1score.innerText)+ 1;
+        increaseOver1();
+        checkturn1change();
+    }
+    
+    if (event.key === "2") {
+        team1score.innerText=parseInt(team1score.innerText)+ 2;
+          increaseOver1();
+          checkturn1change();
+        }
+        
+        if (event.key === "3") {
+        team1score.innerText=parseInt(team1score.innerText)+ 3;
+        increaseOver1();
+        checkturn1change();
+    }
+    
+    if (event.key === "4") {
+        team1score.innerText=parseInt(team1score.innerText)+ 4;
+        increaseOver1();
+        checkturn1change();
+    }
+    
+    if (event.key === "6") {
+        team1score.innerText=parseInt(team1score.innerText)+ 6;
+        increaseOver1();
+        checkturn1change();
+    }
+    
+    if (event.key === "0") {
+        team1score.innerText=parseInt(team1score.innerText)+ 0;
+        increaseOver1();
+        checkturn1change();
+    }
+    
+    
+    
+});
+
+
+}
+
+//team2 settings
+
+if(team2turn){
+    
+    
+    
+    
+    const increaseOver=()=>{
+        ball2++;
+        team2ball.innerText=ball2;
+        if(ball2==6){
+            ball2=0;
+        over2++;
+        team2ball.innerText=ball2;
+        team2over.innerText=over2;
+        
+    }
+}
+    
+
+
+
+
+for (let i = 0; i <= 5; i++) {
+    run2[i].addEventListener("click",()=>{
+        team2score.innerText=parseInt(team2score.innerText)+parseInt(run2[i].innerText);
+        increaseOver();
+    })
+}
+
+edit2Wick.addEventListener("change",()=>{
+    team2wicket.innerText++;
+})
+
+body.addEventListener('keypress', function(event) {
+    
+    
+    if (event.key === "1") {
+            team2score.innerText=parseInt(team2score.innerText)+ 1;
+            increaseOver();
+            checkturn2change();
+        }
+        
+        if (event.key === "2") {
+            team2score.innerText=parseInt(team2score.innerText)+ 2;
+            increaseOver1();
+            checkturn2change();
+        }
+    
+        if (event.key === "3") {
+            team2score.innerText=parseInt(team2score.innerText)+ 3;
+            increaseOver1();
+            checkturn2change();
+        }
+        
+        if (event.key === "4") {
+            team2score.innerText=parseInt(team2score.innerText)+ 4;
+            increaseOver1();
+            checkturn2change();
+        }
+        
+        if (event.key === "6") {
+            team2score.innerText=parseInt(team2score.innerText)+ 6;
+            increaseOver1();
+            checkturn2change();
+        }
+        
+        if (event.key === "0") {
+            team2score.innerText=parseInt(team2score.innerText)+ 0;
+            increaseOver1();
+            checkturn2change();
+        }
+        
+        
+        
+    });
+    
+}
+
+
+
+const turnchange=()=>{
+    if(team1turn){
+        team1turn=0;
+        team2turn=1;
+    }
+    else{
+        team1turn=1;
+        team2turn=0;
+    }
+    
+}
+
+
+
+
+
+const checkturn=()=>{
+    if(over1<10){
+        team1turn==true;
+        team2turn==false
+    }
+    
+    else{
+        team1turn==false;
+        team2turn==true;
+    }
+}
+
+checkturn();
+
 const checkturn1change=()=>{
 // if(team1over.innerText==='20'||team1wicket.innerText==='10'){
 //     team1turn=false;
@@ -67,154 +241,3 @@ if(ball1==6){
 
 }
 }
-
-if(team1turn){
-
-for (let i = 0; i <= 5; i++) {
-    run1[i].addEventListener("click",()=>{
-        team1score.innerText=parseInt(team1score.innerText)+parseInt(run1[i].innerText);
-        increaseOver1();
-        checkturn1change();
-    })
-}
-
-edit1Wick.addEventListener("change",()=>{
-    team1wicket.innerText++;
-    checkturn1change();
-})
-
-body.addEventListener('keypress', function(event) {
-
-
-    if (event.key === "1") {
-        team1score.innerText=parseInt(team1score.innerText)+ 1;
-          increaseOver1();
-          checkturn1change();
-      }
-
-      if (event.key === "2") {
-        team1score.innerText=parseInt(team1score.innerText)+ 2;
-          increaseOver1();
-          checkturn1change();
-      }
-
-      if (event.key === "3") {
-        team1score.innerText=parseInt(team1score.innerText)+ 3;
-          increaseOver1();
-          checkturn1change();
-      }
-
-      if (event.key === "4") {
-        team1score.innerText=parseInt(team1score.innerText)+ 4;
-          increaseOver1();
-          checkturn1change();
-      }
-
-      if (event.key === "6") {
-        team1score.innerText=parseInt(team1score.innerText)+ 6;
-          increaseOver1();
-          checkturn1change();
-      }
-
-      if (event.key === "0") {
-        team1score.innerText=parseInt(team1score.innerText)+ 0;
-          increaseOver1();
-          checkturn1change();
-      }
-    
-
-
-  });
-
-
-}
-
-//team2 settings
-
-if(team2turn){
-
-
-    
-    
-    const increaseOver=()=>{
-        ball2++;
-    team2ball.innerText=ball2;
-    if(ball2==6){
-        ball2=0;
-        over2++;
-        team2ball.innerText=ball2;
-        team2over.innerText=over2;
-    
-    }
-    }
-    
-    
-
-    
-    
-    for (let i = 0; i <= 5; i++) {
-        run2[i].addEventListener("click",()=>{
-            team2score.innerText=parseInt(team2score.innerText)+parseInt(run2[i].innerText);
-            increaseOver();
-        })
-    }
-    
-    edit2Wick.addEventListener("change",()=>{
-        team2wicket.innerText++;
-    })
-
-    body.addEventListener('keypress', function(event) {
-
-
-        if (event.key === "1") {
-            team2score.innerText=parseInt(team2score.innerText)+ 1;
-              increaseOver();
-              checkturn2change();
-          }
-    
-          if (event.key === "2") {
-            team2score.innerText=parseInt(team2score.innerText)+ 2;
-              increaseOver1();
-              checkturn2change();
-          }
-    
-          if (event.key === "3") {
-            team2score.innerText=parseInt(team2score.innerText)+ 3;
-              increaseOver1();
-              checkturn2change();
-          }
-    
-          if (event.key === "4") {
-            team2score.innerText=parseInt(team2score.innerText)+ 4;
-              increaseOver1();
-              checkturn2change();
-          }
-    
-          if (event.key === "6") {
-            team2score.innerText=parseInt(team2score.innerText)+ 6;
-              increaseOver1();
-              checkturn2change();
-          }
-    
-          if (event.key === "0") {
-            team2score.innerText=parseInt(team2score.innerText)+ 0;
-              increaseOver1();
-              checkturn2change();
-          }
-        
-    
-    
-      });
-
-}
-
-
-
-const turnchange=()=>{
-    if(team1turn){
-        team1turn=0;
-    }
-    
-}
-
-
